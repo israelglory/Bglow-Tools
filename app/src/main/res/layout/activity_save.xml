@@ -1,0 +1,774 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SaveActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:id="@+id/idForSaving"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:padding="1dp"
+            android:paddingTop="0dp"
+            android:paddingBottom="15dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/Rlogo"
+                    android:layout_width="90dp"
+                    android:layout_height="55dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:contentDescription="@string/todo"
+                    android:src="@drawable/bglowpng"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/RAdress"
+                    android:layout_width="242dp"
+                    android:layout_height="96dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/rao_complex_opposite_adelabu_market_orita_challenge_ibadan_oyo_state"
+                    android:textColor="#000000"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/Rlogo" />
+
+                <TextView
+                    android:id="@+id/phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/phone"
+                    android:textColor="#000000"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/RAdress" />
+
+                <TextView
+                    android:id="@+id/DateText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:text="@string/date"
+                    android:textColor="#000000"
+                    android:visibility="invisible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/Customerdigit" />
+
+                <TextView
+                    android:id="@+id/Cname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:textColor="#000000"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/phone" />
+
+                <TextView
+                    android:id="@+id/CustomerHadress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:text=""
+                    android:textColor="#000000"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/Cname" />
+
+                <TextView
+                    android:id="@+id/Customerdigit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:textColor="#000000"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/CustomerHadress" />
+
+                <TextView
+                    android:id="@+id/describe"
+                    android:layout_width="199dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="8dp"
+                    android:background="#3C43B3"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="@string/describe"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toStartOf="@+id/rateit"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/DateText" />
+
+                <TextView
+                    android:id="@+id/rateit"
+                    android:layout_width="83dp"
+                    android:layout_height="35dp"
+                    android:background="#3C43B3"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="@string/SaveRate"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/describe"
+                    app:layout_constraintEnd_toStartOf="@+id/theamount"
+                    app:layout_constraintStart_toEndOf="@+id/describe"
+                    app:layout_constraintTop_toTopOf="@+id/describe" />
+
+                <TextView
+                    android:id="@+id/theamount"
+                    android:layout_width="108dp"
+                    android:layout_height="35dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginRight="24dp"
+                    android:background="#3C43B3"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="@string/amountText"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/rateit"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/rateit"
+                    app:layout_constraintTop_toTopOf="@+id/rateit" />
+
+                <View
+                    android:id="@+id/divider"
+                    android:layout_width="2dp"
+                    android:layout_height="260dp"
+                    android:background="?android:attr/listDivider"
+                    app:layout_constraintEnd_toStartOf="@+id/rateit"
+                    app:layout_constraintTop_toTopOf="@+id/describe" />
+
+                <View
+                    android:id="@+id/divider2"
+                    android:layout_width="2dp"
+                    android:layout_height="260dp"
+                    android:background="?android:attr/listDivider"
+                    app:layout_constraintEnd_toStartOf="@+id/theamount"
+                    app:layout_constraintTop_toTopOf="@+id/theamount" />
+
+                <View
+                    android:id="@+id/divider3"
+                    android:layout_width="388dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="41dp"
+                    android:layout_marginBottom="41dp"
+                    android:background="?android:attr/listDivider"
+                    app:layout_constraintBottom_toTopOf="@+id/divider4"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/describe" />
+
+                <View
+                    android:id="@+id/divider4"
+                    android:layout_width="388dp"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="41dp"
+                    android:background="?android:attr/listDivider"
+                    app:layout_constraintBottom_toTopOf="@+id/divider5"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <View
+                    android:id="@+id/divider5"
+                    android:layout_width="388dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="41dp"
+                    android:background="?android:attr/listDivider"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/divider4" />
+
+                <View
+                    android:id="@+id/divider6"
+                    android:layout_width="388dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="41dp"
+                    android:background="?android:attr/listDivider"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/divider5" />
+
+                <View
+                    android:id="@+id/divider7"
+                    android:layout_width="388dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="41dp"
+                    android:background="?android:attr/listDivider"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/divider6" />
+
+                <TextView
+                    android:id="@+id/TotalText"
+                    android:layout_width="78dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="105dp"
+                    android:layout_marginLeft="105dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="@string/TextTotal"
+                    android:textAlignment="center"
+                    android:textColor="#B51717"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@+id/RecieptAmount"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/divider7" />
+
+                <TextView
+                    android:id="@+id/RecieptAmount"
+                    android:layout_width="160dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="@string/Final_Reciept_Amount"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textSize="19sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/TotalText"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/TotalText"
+                    app:layout_constraintTop_toTopOf="@+id/TotalText"
+                    app:layout_constraintVertical_bias="0.0"
+                    tools:text="0" />
+
+                <TextView
+                    android:id="@+id/d1"
+                    style="@style/text"
+                    android:layout_width="184dp"
+                    android:layout_height="31dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:text=""
+                    android:textColor="#000000"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toTopOf="@+id/divider3"
+                    app:layout_constraintEnd_toStartOf="@+id/divider"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/describe"
+                    tools:ignore="TextContrastCheck" />
+
+
+                <TextView
+                    android:id="@+id/r1"
+                    style="@style/rateStyle"
+                    android:layout_width="73dp"
+                    android:layout_height="34dp"
+                    android:text=""
+                    app:layout_constraintEnd_toEndOf="@+id/rateit"
+                    app:layout_constraintStart_toStartOf="@+id/rateit"
+                    app:layout_constraintTop_toBottomOf="@+id/rateit" />
+
+
+                <TextView
+                    android:id="@+id/A1"
+                    android:layout_width="81dp"
+                    android:layout_height="31dp"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toTopOf="@+id/divider3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/divider2"
+                    app:layout_constraintTop_toBottomOf="@+id/theamount" />
+
+                <TextView
+                    android:id="@+id/d2"
+                    style="@style/text"
+                    android:layout_width="191dp"
+                    android:layout_height="38dp"
+                    android:text=""
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toTopOf="@+id/divider4"
+                    app:layout_constraintEnd_toStartOf="@+id/divider"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/divider3" />
+
+                <TextView
+                    android:id="@+id/r2"
+                    style="@style/rateStyle"
+                    android:layout_width="74dp"
+                    android:layout_height="33dp"
+                    android:text=""
+                    app:layout_constraintBottom_toTopOf="@+id/divider4"
+                    app:layout_constraintEnd_toStartOf="@+id/divider2"
+                    app:layout_constraintHorizontal_bias="0.555"
+                    app:layout_constraintStart_toEndOf="@+id/divider"
+                    app:layout_constraintTop_toBottomOf="@+id/divider3"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/A2"
+                    style="@style/rateStyle"
+                    android:layout_width="77dp"
+                    android:layout_height="32dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="9dp"
+                    android:layout_marginEnd="13dp"
+                    android:layout_marginRight="13dp"
+                    android:layout_marginBottom="6dp"
+                    app:layout_constraintBottom_toTopOf="@+id/divider4"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/divider2"
+                    app:layout_constraintTop_toBottomOf="@+id/divider3"
+                    tools:text="" />
+
+                <TextView
+                    android:id="@+id/d3"
+                    style="@style/text"
+                    android:layout_width="190dp"
+                    android:layout_height="37dp"
+                    android:layout_marginEnd="1dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="4dp"
+                    android:text=""
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toTopOf="@+id/divider5"
+                    app:layout_constraintEnd_toStartOf="@+id/divider"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/divider4" />
+
+                <TextView
+                    android:id="@+id/r3"
+                    style="@style/rateStyle"
+                    android:layout_width="67dp"
+                    android:layout_height="32dp"
+                    android:layout_marginBottom="4dp"
+                    android:text=""
+                    app:layout_constraintBottom_toTopOf="@+id/divider5"
+                    app:layout_constraintEnd_toStartOf="@+id/divider2"
+                    app:layout_constraintStart_toEndOf="@+id/divider" />
+
+                <TextView
+                    android:id="@+id/A3"
+                    style="@style/rateStyle"
+                    android:layout_width="79dp"
+                    android:layout_height="27dp"
+                    android:layout_marginTop="8dp"
+                    android:text=""
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/divider2"
+                    app:layout_constraintTop_toBottomOf="@+id/divider4" />
+
+                <TextView
+                    android:id="@+id/d4"
+                    style="@style/text"
+                    android:layout_width="193dp"
+                    android:layout_height="35dp"
+                    android:text=""
+
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toTopOf="@+id/divider6"
+                    app:layout_constraintEnd_toStartOf="@+id/divider"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/divider5" />
+
+                <TextView
+                    android:id="@+id/r4"
+                    style="@style/rateStyle"
+                    android:layout_width="72dp"
+                    android:layout_height="29dp"
+                    android:layout_marginBottom="8dp"
+                    android:text=""
+                    app:layout_constraintBottom_toTopOf="@+id/divider6"
+                    app:layout_constraintEnd_toStartOf="@+id/divider2"
+                    app:layout_constraintStart_toEndOf="@+id/divider"
+                    app:layout_constraintTop_toBottomOf="@+id/divider5" />
+
+                <TextView
+                    android:id="@+id/A4"
+                    style="@style/rateStyle"
+                    android:layout_width="89dp"
+                    android:layout_height="32dp"
+                    android:layout_marginTop="5dp"
+                    android:text=""
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/divider2"
+                    app:layout_constraintTop_toBottomOf="@+id/divider5" />
+
+                <TextView
+                    android:id="@+id/d5"
+                    style="@style/text"
+                    android:layout_width="187dp"
+                    android:layout_height="32dp"
+                    android:text=""
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toTopOf="@+id/divider7"
+                    app:layout_constraintEnd_toStartOf="@+id/divider"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/divider6" />
+
+                <TextView
+                    android:id="@+id/r5"
+                    style="@style/rateStyle"
+                    android:layout_width="70dp"
+                    android:layout_height="29dp"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="6dp"
+                    android:text=""
+                    app:layout_constraintBottom_toTopOf="@+id/divider7"
+                    app:layout_constraintEnd_toStartOf="@+id/divider2"
+                    app:layout_constraintStart_toEndOf="@+id/divider"
+                    app:layout_constraintTop_toBottomOf="@+id/divider6" />
+
+                <TextView
+                    android:id="@+id/A5"
+                    style="@style/rateStyle"
+                    android:layout_width="79dp"
+                    android:layout_height="33dp"
+                    android:layout_marginTop="4dp"
+                    android:text=""
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/divider2"
+                    app:layout_constraintTop_toBottomOf="@+id/divider6" />
+
+                <TextView
+                    android:id="@+id/note"
+                    android:layout_width="375dp"
+                    android:layout_height="133dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="16dp"
+                    android:padding="5dp"
+                    android:text="@string/notice"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/collection" />
+
+                <TextView
+                    android:id="@+id/collection"
+                    android:layout_width="285dp"
+                    android:layout_height="33dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:textColor="#404040"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/RecieptAmount" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/preview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/preview"
+            tools:ignore="TextContrastCheck" />
+
+        <Button
+            android:id="@+id/save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="SaveClick"
+            android:text="@string/save"
+            tools:ignore="TextContrastCheck" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/Customername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/customer_name">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/CnameEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:ignore="TextContrastCheck,TextContrastCheck,DuplicateSpeakableTextCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/CustomerPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/customer_phone">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/CphoneEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                tools:ignore="TextContrastCheck,TextContrastCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/CustomerAdress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/customer_address">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/CaddressET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:ignore="TextContrastCheck,TextContrastCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/Description1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/description">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/dET1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:ignore="TextContrastCheck,TextContrastCheck,DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck,TouchTargetSizeCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/rr1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/rate">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/rateET1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:ignore="DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck,TextContrastCheck,TouchTargetSizeCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/AA1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/amount">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/AET1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:ignore="DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck,TextContrastCheck,TouchTargetSizeCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/Description2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/description">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/dET2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:ignore="TextContrastCheck,TextContrastCheck,DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck,TouchTargetSizeCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/rr2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/rate">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/rateET2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:ignore="DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck,TextContrastCheck,TouchTargetSizeCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/AA2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/amount">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/AET2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:ignore="DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck,TextContrastCheck,TouchTargetSizeCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/Description3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/description">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/dET3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:ignore="TextContrastCheck,TextContrastCheck,DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck,TouchTargetSizeCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/rr3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/rate">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/rateET3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:ignore="DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck,TextContrastCheck,TouchTargetSizeCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/AA3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/amount">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/AET3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:ignore="DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck,TextContrastCheck,TouchTargetSizeCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/Description4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/description">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/dET4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:ignore="TextContrastCheck,TextContrastCheck,DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck,TouchTargetSizeCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/rr4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/rate">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/rateET4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:ignore="DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck,TextContrastCheck,TouchTargetSizeCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/AA4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/amount">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/AET4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:ignore="DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck,TextContrastCheck,TouchTargetSizeCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/Description5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/description">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/dET5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:ignore="TextContrastCheck,TextContrastCheck,DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck,TouchTargetSizeCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/rr5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/rate">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/rateET5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:ignore="DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck,TextContrastCheck,TouchTargetSizeCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/AA5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/amount">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/AET5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:ignore="DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck,TextContrastCheck,TouchTargetSizeCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/collect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/dateOfCollection">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/collectionET"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:ignore="DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck,TextContrastCheck,TooManyViews,TouchTargetSizeCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    </LinearLayout>
+</ScrollView>
